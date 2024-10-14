@@ -4,7 +4,7 @@
 
 import Canvas from "@brendangooch/canvas";
 
-interface iRenderable {
+export interface iRenderable {
     render(canvas: Canvas): void
 }
 
