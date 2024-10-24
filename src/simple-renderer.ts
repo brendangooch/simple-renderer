@@ -2,13 +2,10 @@
  * 
  */
 
-import Canvas from "@brendangooch/canvas";
+import { Canvas } from "@brendangooch/canvas";
+import { iRenderable } from "./index.js";
 
-export interface iRenderable {
-    render(canvas: Canvas): void
-}
-
-export default class SimpleRenderer {
+export class SimpleRenderer {
 
     public static FPS: number = 60;
 

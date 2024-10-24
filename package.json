@@ -1,46 +1,45 @@
 {
-  "name": "@brendangooch/simple-renderer",
-  "version": "1.0.1",
-  "description": "",
-  "author": "B Gooch <brendangooch@gmail.com>",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "prepack": "npm run build",
-    "prebuild": "npm run clean",
-    "clean": "rm -rf lib",
-    "build": "tsc"
-  },
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  },
-  "exports": {
-    ".": "./lib/simple-renderer.js"
-  },
-  "types": "./lib/simple-renderer.d.ts",
-  "files": [
-    "/lib",
-    "!/lib/**/*.js.map",
-    "!/lib/*.js.map"
-  ],
-  "dependencies": {
-    "@brendangooch/canvas": "^1.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brendangooch/simple-renderer.git"
-  },
-  "homepage": "https://github.com/brendangooch/simple-renderer#readme",
-  "bugs": {
-    "url": "https://github.com/brendangooch/simple-renderer/issues",
-    "email": "brendangooch@gmail.com"
-  },
-  "keywords": [
-    "renderer",
-    "canvas"
-  ]
+	"name": "@brendangooch/simple-renderer",
+	"version": "1.0.1",
+	"description": "",
+	"author": "B Gooch <brendangooch@gmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"scripts": {
+		"build": "tsc -p tsconfig.prod.json",
+		"build-dev": "npm run prebuild && tsc",
+		"prebuild": "npm run remove-lib",
+		"prepack": "npm run build",
+		"remove-lib": "rm -rf lib"
+	},
+	"private": false,
+	"publishConfig": {
+		"access": "public"
+	},
+	"exports": {
+		".": "./lib/index.js"
+	},
+	"types": "./lib/index.d.ts",
+	"files": [
+		"/lib"
+	],
+	"devDependencies": {
+		"typescript": "^5.4.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/brendangooch/simple-renderer.git"
+	},
+	"homepage": "https://github.com/brendangooch/simple-renderer#readme",
+	"bugs": {
+		"url": "https://github.com/brendangooch/simple-renderer/issues",
+		"email": "brendangooch@gmail.com"
+	},
+	"keywords": [
+		"renderer",
+		"canvas"
+	],
+	"dependencies": {
+		"@brendangooch/canvas": "^2.0.0"
+	}
 }
