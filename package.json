@@ -1,6 +1,6 @@
 {
 	"name": "@brendangooch/simple-renderer",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "",
 	"author": "B Gooch <brendangooch@gmail.com>",
 	"license": "MIT",
@@ -40,6 +40,6 @@
 		"canvas"
 	],
 	"dependencies": {
-		"@brendangooch/canvas": "^2.1.0"
+		"@brendangooch/canvas": "^3.0.0"
 	}
 }
